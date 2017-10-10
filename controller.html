@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>小车遥控器</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <script src="https://cdn.bootcss.com/socket.io/2.0.3/socket.io.js"></script> -->
+    <script src="./js/socket.io.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="leftjoystick">
+            <canvas id="joystick" width="120" height="120"></canvas>
+        </div>
+        <div class="connect-status-section">
+            <span id="socket-status">
+                未连接
+            </span>
+        </div>
+        <div class="socket-url-section">
+            <span>连接地址：</span>
+            <input type="text" id="connect-url" class="simple-input"/>
+            <button id="save-url-btn"   class="simple-btn">保存</button>
+        </div>
+        <div class="angle-offset-section">
+            <span>摇杆旋转偏移量：</span>
+            <input type="text" id="angle-offset" class="simple-input"/>
+            <button id="angle-offset-btn" type="number" class="simple-btn">保存</button>
+        </div>
+    </div>
+</body>
+
+<script src="./js/joystick.js"></script>
+<script src="./js/socket_send.js"></script>
+<script src="./js/index.js"></script>
+</html>
